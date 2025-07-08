@@ -1,4 +1,4 @@
-const ProductSchema = require("../model/ProductModel");
+const ProductSchema = require("../Model/ProductModel");
 const { default: mongoose } = require("mongoose");
 
 exports.AddProducts = async (req, res, next) => {
@@ -169,7 +169,7 @@ exports.SearchProducts = async (req, res, next) => {
   try {
     const products = await ProductSchema.find({
       $or: [
-        { title: { $regex: escapedTerm, $options: "i" } },  // Fixed typo: changed e1scapedTerm to escapedTerm
+        { title: { $regex: escapedTerm, $options: "i" } }, // Fixed typo: changed e1scapedTerm to escapedTerm
         { category: { $regex: escapedTerm, $options: "i" } },
         { tags: { $regex: escapedTerm, $options: "i" } },
       ],
