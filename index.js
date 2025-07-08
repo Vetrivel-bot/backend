@@ -16,7 +16,7 @@ app.use(cookieParser());
 app.use("/uploads", express.static("uploads"));
 app.use(
   cors({
-    origin: "https://startling-shortbread-192502.netlify.app/",
+    origin: "https://startling-shortbread-192502.netlify.app",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
