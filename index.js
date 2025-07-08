@@ -18,8 +18,6 @@ app.use(
   cors({
     origin: "https://startling-shortbread-192502.netlify.app",
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 app.use("/api", productRoute, userRoute);
